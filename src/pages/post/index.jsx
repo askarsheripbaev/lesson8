@@ -6,6 +6,9 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import CircularProgress from '@mui/material/CircularProgress';
+
 
 const PostPage = () => {
     const {id} = useParams()
@@ -43,7 +46,9 @@ const PostPage = () => {
     if (isLoading) {
         return (
             <div>
-                Loading....
+                <Box sx={{ display: 'flex' }}>
+                    <CircularProgress />
+                </Box>
             </div>
         )
     }
